@@ -1,6 +1,6 @@
 {
     "name": "app-local-marketplace",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "private": true,
     "scripts": {
         "start": "http-server ./public -a localhost -p 3001",

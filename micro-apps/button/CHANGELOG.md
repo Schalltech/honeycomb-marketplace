@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.0.0-beta.8 (2020-10-01)
+
+
+### Features
+
+* initial commit ([708997f](https://github.com/Schalltech/honeycomb-marketplace/commit/708997ff3d43cef2574fe4eb4394219df00e7f08))
+
+
+
+
+
 # [0.0.0-beta.7](https://github.com/Schalltech/honeycomb-marketplace/compare/ma-button@0.0.0-beta.6...ma-button@0.0.0-beta.7) (2020-09-30)
 
 **Note:** Version bump only for package ma-button
