@@ -1,0 +1,55 @@
+{
+  "name": "@schalltech/honeycomb-cli",
+  "version": "0.11.10",
+  "bin": {
+    "honeycomb-cli": "./bin/run"
+  },
+  "bugs": "https://github.com/Schalltech/honeycomb-marketplace/issues",
+  "scripts": {
+    "build": "echo No BUILD SCRIPT",
+    "postpack": "rimraf oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "npm i @oclif/dev-cli@^1.22.2 --save-dev && oclif-dev manifest",
+    "test": "echo NO TESTS",
+    "version": ""
+  },
+  "dependencies": {
+    "@oclif/command": "^1.5.18",
+    "@oclif/config": "^1.13.3",
+    "@oclif/plugin-help": "^2.2.1",
+    "cli-ux": "^5.3.2",
+    "execa": "^2.0.4",
+    "inquirer": "^7.0.0",
+    "js-pascalcase": "^1.2.1",
+    "listr": "^0.14.3",
+    "lodash.startcase": "^4.4.0",
+    "lowdb": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "oclif": "^1.13.6",
+    "pwd-fs": "^1.2.12",
+    "shelljs": "^0.8.3",
+    "to-lower-case": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "honeycomb-cli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "Schalltech/honeycomb-marketplace"
+}

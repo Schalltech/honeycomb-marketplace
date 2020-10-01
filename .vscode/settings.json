@@ -1,0 +1,23 @@
+{
+  "git.ignoreLimitWarning": true,
+  "javascript.format.enable": false,
+  "eslint.enable": true,
+  "eslint.options": {
+    "configFile": "../.eslintrc.js",
+    "rulesdir": "./"
+  },
+  "eslint.workingDirectories": [
+    "./micro-apps",
+    "./applications"
+  ],
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/.git": true,
+    "**/*.orig": true
+  },
+  "eslint.packageManager": "npm",
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/*
+**/node_modules/*
+**/public/*
+**/stories/*
+**/dist/*
+config/*
+*.data.js

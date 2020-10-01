@@ -1,0 +1,32 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "source": {
+        "include": [
+            "src",
+            "../ma-image/src/components/image/image.model.js",
+            "../../../libraries/lib-honeycomb-core/src/models/plugin.model.js"
+        ],
+        "includePattern": ".+\\.model.js?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [
+        "plugins/markdown",
+        "plugins/summarize"
+    ],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "better-docs": {
+            "name": "My React components"
+          }
+    },
+    "opts": {
+        "destination": "schema",
+        "recurse": true
+    },
+    "recurseDepth": 10,
+    "sourceType": "module"
+}

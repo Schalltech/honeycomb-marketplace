@@ -1,0 +1,31 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "allowBranch": "master",
+      "message": "chore(release): semaphore - bump versions and publish tags [skip ci]",
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md"
+      ]
+    },
+    "publish": {
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md"
+      ],
+      "message": "chore(release): publish"
+    },
+    "bootstrap": {
+      "ignore": [],
+      "npmClientArgs": []
+    }
+  },
+  "packages": [
+    "micro-apps/**",
+    "applications/*",
+    "libraries/*"
+  ]
+}

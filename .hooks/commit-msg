@@ -1,0 +1,89 @@
+#!/bin/sh
+# husky
+
+# Hook created by Husky
+#   Version: 3.0.5
+#   At: 2019-9-27 16:06:14
+#   See: https://github.com/typicode/husky#readme
+
+# From
+#   Directory: undefined
+#   Homepage: https://github.com/typicode/husky#readme
+
+scriptPath="node_modules/husky/run.js"
+hookName=`basename "$0"`
+gitParams="$*"
+
+debug() {
+  if [ "${HUSKY_DEBUG}" = "true" ] || [ "${HUSKY_DEBUG}" = "1" ]; then
+    echo "husky:debug $1"
+  fi
+}
+
+try()
+{
+    [[ $- = *e* ]]; SAVED_OPT_E=$?
+    set +e
+}
+
+throw()
+{
+    exit $1
+}
+
+catch()
+{
+    export ex_code=$?
+    (( $SAVED_OPT_E )) && set +e
+    return $ex_code
+}
+
+throwErrors()
+{
+    set -e
+}
+
+ignoreErrors()
+{
+    set +e
+}
+
+debug "$hookName hook started"
+if [ "${HUSKY_SKIP_HOOKS}" = "true" ] || [ "${HUSKY_SKIP_HOOKS}" = "1" ]; then
+  debug "HUSKY_SKIP_HOOKS is set to ${HUSKY_SKIP_HOOKS}, skipping hook"
+  exit 0
+fi
+
+if [ "${HUSKY_USE_YARN}" = "true" ] || [ "${HUSKY_USE_YARN}" = "1" ]; then
+  debug "calling husky through Yarn"
+  yarn husky-run $hookName "$gitParams"
+else
+  
+  if [ -f "$scriptPath" ]; then
+    # if [ -t 1 ]; then
+    #   exec < /dev/tty
+    # fi
+    if [ -f ~/.huskyrc ]; then
+      debug "source ~/.huskyrc"
+      . ~/.huskyrc
+    fi
+    
+    try
+    (
+      node "$scriptPath" $hookName "$gitParams"
+    )
+    catch || {
+
+      echo 
+      echo ""
+      echo "PROTIP: Use command 'yarn commit' to guide you with commit messages!"
+      echo ""
+      throw $ex_code
+    }
+    
+  else
+    echo "Can't find Husky, skipping $hookName hook"
+    echo "You can reinstall it using 'npm install husky --save-dev' or delete this hook"
+  fi
+fi
+
