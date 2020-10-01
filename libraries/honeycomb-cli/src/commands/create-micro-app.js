@@ -15,8 +15,6 @@ const toKebabCase = (str) => str
     .map((x) => x.toLowerCase())
     .join('-');
 
-// const userConfigFileName = 'create-micro-app.config.json';
-// let userConfig;
 let targetRoot;
 let appKebabName;
 let appPascalName;
@@ -29,8 +27,6 @@ class CreateMicroAppCommand extends Command {
     console.log('WELCOME TO HONEYCOMB MICRO-APP CLI');
     console.log('Directory', process.cwd());
     console.log('\n');
-
-    // userConfig = await fs.readJSON(path.join(this.config.configDir, userConfigFileName));
 
     const responses = await inquirer.prompt([
       {
