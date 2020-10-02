@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/Schalltech/honeycomb-marketplace/compare/@schalltech/honeycomb-cli@0.13.0...@schalltech/honeycomb-cli@0.14.0) (2020-10-02)
+
+
+### Bug Fixes
+
+* resolved issue with honeycomb core dependency version ([0736084](https://github.com/Schalltech/honeycomb-marketplace/commit/07360845b8e2b85f8677534d6d1ce632a81f84a2))
+
+
+### Features
+
+* added props table to story and updated greeting ([b466cd3](https://github.com/Schalltech/honeycomb-marketplace/commit/b466cd3c817aa19c158d8d8e643d658226bfa593))
+* removed RTW badge and changelog link from generated readme ([e2f01b3](https://github.com/Schalltech/honeycomb-marketplace/commit/e2f01b3b966266e34e6e455c527b19593734f43c))
+* updated verbiage for the integration example section ([3ad26cc](https://github.com/Schalltech/honeycomb-marketplace/commit/3ad26cc7a5c1f76efaa264e179891806b586c53e))
+
+
+
+
+
 # [0.13.0](https://github.com/Schalltech/honeycomb-marketplace/compare/@schalltech/honeycomb-cli@0.12.0...@schalltech/honeycomb-cli@0.13.0) (2020-10-02)
 
 
