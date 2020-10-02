@@ -8,16 +8,16 @@ import App from '../src/app';
 storiesOf('Micro Apps|__Micro_App_Name__', module)
   .addParameters({
     readme: {
-      sidebar: Readme,
+      content: Readme,
       codeTheme: 'github',
     },
-    options: { showPanel: true },
+    options: { showPanel: false },
   }).add('Overview', () => {
 
     const defaultHistory = createBrowserHistory();
 
     return (
-      <div style={{ display: 'flex', height: 'calc(100vh - 16px)' }}>
+      <div style={{ display: 'flex' }}>
         <MicroApp
           config={{
             View: {
