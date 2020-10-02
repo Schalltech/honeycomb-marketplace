@@ -5,7 +5,7 @@ import { createBrowserHistory } from 'history';
 import Readme from '../README.md';
 import App from '../src/app';
 
-storiesOf('Micro Apps|__Micro_App_Name__', module)
+storiesOf('Micro Apps|Textbox', module)
   .addParameters({
     readme: {
       content: Readme,
@@ -21,20 +21,12 @@ storiesOf('Micro Apps|__Micro_App_Name__', module)
         <MicroApp
           config={{
             View: {
-              Name: '__MICRO_APP_NAME__',
+              Name: 'textbox',
               Component: App,
             },
             Container: {
-              display: 'flex',
-              flex: '1 1 100%',
-              alignItems: 'center',
-              justifyContent: 'center',
+              padding: '40px 0px',
             },
-            Attributes: {
-              backgroundColor: '#FFCC00',
-              color: '#333333',
-            },
-            Welcome: 'Welcome to the __MICRO_APP_NAME__ plugin!',
           }}
           history={defaultHistory}
         />
