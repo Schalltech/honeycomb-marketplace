@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/Schalltech/honeycomb-marketplace/compare/@schalltech/honeycomb-cli@0.12.0...@schalltech/honeycomb-cli@0.13.0) (2020-10-02)
+
+
+### Features
+
+* updated story to show readme as content and hide the options panel ([aa713b9](https://github.com/Schalltech/honeycomb-marketplace/commit/aa713b9f95f6b31a5ea37ce0ea8488da9b87a548))
+
+
+
+
+
 # 0.12.0 (2020-10-01)
 
 
