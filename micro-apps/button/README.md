@@ -7,6 +7,7 @@ Latest RTW Version | Changelog
 ## Basic Usage
 The following example demonstrates the Button micro app in action.
 
+<!-- STORY -->
 
 ## Installation
 
