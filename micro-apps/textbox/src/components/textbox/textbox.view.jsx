@@ -9,7 +9,7 @@ const TextboxView = observer((props) => {
     vm: {
       text,
       Attributes,
-      Placeholder,
+      placeholder,
     },
     vm,
   } = props;
@@ -18,7 +18,7 @@ const TextboxView = observer((props) => {
     <>
       <input
         className="honeycomb-textbox"
-        placeholder={Placeholder || ''}
+        placeholder={placeholder || ''}
         value={text}
         onChange={(e) => { vm.text = e.target.value; }}
         style={Attributes}
