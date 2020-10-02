@@ -1,3 +1,10 @@
+
+
+## Honeycomb Micro Apps
+*ATTN: Honeycomb Studio, Honeycomb Marketplace, microapps, components and libraries are in pre-release and are not intended to be used in a production environment. The platform is currently under development and releases are not guaranteed to be backwards compatible.*
+
+<img src="https://microapp.services/cdn/media/5f53f90acf690435dcae31d8"/>
+
 <p align="center">  
    <a href="http://commitizen.github.io/cz-cli/" target="_blank">
       <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg">
@@ -9,11 +16,6 @@
      <img src="https://github.com/storybookjs/brand/blob/master/badge/badge-storybook.svg">
    </a>
 </p>
-
-## Honeycomb Micro Apps
-*ATTN: Honeycomb Studio, Honeycomb Marketplace, microapps, components and libraries are in pre-release and are not intended to be used in a production environment. The platform is currently under development and releases are not guaranteed to be backwards compatible.*
-
-
 
 ## Contents
 
