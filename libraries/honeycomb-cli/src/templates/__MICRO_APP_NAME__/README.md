@@ -1,9 +1,3 @@
-Latest RTW Version | Changelog 
-:---- | :-----: 
-![__MICRO_APP_NAME__](https://img.shields.io/badge/dynamic/json?color=green&logo=react&style=flat-square&label=__MICRO_APP_NAME__&prefix=Version%20&query=%24.version&url=https://raw.githubusercontent.com/Schalltech/honeycomb-marketplace/master/micro-apps/shared/__MICRO_APP_NAME__/package.json) | [view](https://github.com/Schalltech/honeycomb-marketplace/blob/master/micro-apps/shared/__MICRO_APP_NAME__/CHANGELOG.md) 
-
-# Honeycomb __Micro_App_Name__ Overview
-
 ## Basic Usage
 The following example demonstrates the __Micro_App_Name__ micro app in action.
 
