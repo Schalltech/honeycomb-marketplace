@@ -11,7 +11,7 @@ class __MicroAppName__ViewModel extends __MicroAppName__Model {
   constructor(micro) {
     super(micro);
 
-    this.greeting = 'Hi, I am a Honeycomb micro app!';
+    this.greeting = this.Welcome;
     this.greet = this.greet.bind(this);
   }
 

@@ -7,11 +7,15 @@ import App from '../src/app';
 
 storiesOf('Micro Apps|__Micro_App_Name__', module)
   .addParameters({
+    props: {
+      propTables: [App],
+      propTablesExclude: [MicroApp],
+    },
     readme: {
-      content: Readme,
+      sidebar: Readme,
       codeTheme: 'github',
     },
-    options: { showPanel: false },
+    options: { showPanel: true },
   }).add('Overview', () => {
 
     const defaultHistory = createBrowserHistory();
@@ -34,7 +38,7 @@ storiesOf('Micro Apps|__Micro_App_Name__', module)
               backgroundColor: '#FFCC00',
               color: '#333333',
             },
-            Welcome: 'Welcome to the __MICRO_APP_NAME__ plugin!',
+            Welcome: 'Hi, I am a Honeycomb __MICRO_APP_NAME__ Micro App!',
           }}
           history={defaultHistory}
         />
