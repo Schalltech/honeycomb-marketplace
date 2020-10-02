@@ -39,9 +39,9 @@ The following example demonstrates the __Micro_App_Name__ micro app in action.
    ```
 
 ## Integration Example
-The following is an example of how the __Micro_App_Name__ micro-app could be integrated into an existing application. **Note:** The version number referenced below is for illustration purposes only. You will need to provide the version of the __Micro_App_Name__ you want to use. A link to the __Micro_App_Name__ changelog is provided above to review release notes for specific versions.
+The following is an example of how the __Micro_App_Name__ micro-app could be integrated into an existing application. To prevent multiple versions from being loaded, Honeycomb micro-apps require the host to provide references to React and ReactDOM externally. This only has to be done once and can be included in your host applications app.js.
 
-To prevent multiple versions from being loaded, Honeycomb micro-apps require the host to provide references to React and ReactDOM externally. This can be included in your host applications app.js. Then you can import and render the `<MicroApp />` component any where within your application that you would like to incorporate micro-apps.
+**Note:** The version number referenced below is for illustration purposes only. You will need to provide the version of the __Micro_App_Name__ you want to use. A link to the __Micro_App_Name__ changelog is provided in the Additional Information section below where you can review the release notes for specific versions.
 
 ```js
 import React from 'react';
