@@ -33,7 +33,7 @@
 There are multiple approaches that can be taken when using Honeycomb Micro Apps. One way is to use them as if they were traditionally coded components within a React application. Another approach is to create a single micro app that represents an entire page within the application. Using [Honeycomb Studio](https://microapp.studio), it is even possible to build a full featured web application composed entirely out of micro apps with dynamic routing.
 
 ### Using Micro Apps
-The following is a basic example to illustrate how a Honeycomb Micro App could be integrated with a React application.
+The following is a basic example to illustrate how a Honeycomb Micro App could be integrated with a simple React application.
 
 #### Installation
 
@@ -99,15 +99,44 @@ export default App;
 
 ### Creating Micro Apps
 
-Honeycomb makes it easier than ever to build your own micro apps to use within your applications or publish to the Honeycomb Marketplace to share with the community. To make it easy to get up and running, Honeycomb provides a [templated repository](https://github.com/Schalltech/honeycomb-microapp-repo) to manage your micro apps and [Honeycomb CLI](https://www.npmjs.com/package/@schalltech/honeycomb-cli) that will generate the scaffolding of your micro app with a single `create-micro-app` command.
+Honeycomb makes it easier than ever to build your own micro apps to use within your applications or publish to the Honeycomb Marketplace to share with the community. To make it easy to get up and running, Honeycomb provides a [quickstart repository](https://github.com/Schalltech/honeycomb-microapp-repo) to manage your micro apps and [Honeycomb CLI](https://www.npmjs.com/package/@schalltech/honeycomb-cli) that will generate the scaffolding of your micro app with a single `create-micro-app` command.
 
-#### Repository Template
-Honeycomb provides a mono-repository [template](https://github.com/Schalltech/honeycomb-microapp-repo) developers can clone that comes pre-configured with [Lerna](https://github.com/lerna/lerna) for managing micro app dependencies, [Storybook](https://storybook.js.org) for isolated development and a local version of the marketplace for serving micro app requests while running locally. 
+#### Prerequisites
 
-#### Honeycomb CLI
-Complementing the micro app repository, Honeycomb also provides a [command line interface (CLI)](https://www.npmjs.com/package/@schalltech/honeycomb-cli) that will generate the [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) scaffolding of your micro app with the simple command `create-micro-app`. This will generate a fully functioning `Hello World` micro app that you can then customize with your required functionality.
+   1. Clone the [quickstart repository](https://github.com/Schalltech/honeycomb-microapp-repo) and open it with your favorite code editor.
+   
+   2. The quickstart repository is a [monorepo](https://en.wikipedia.org/wiki/Monorepo) that uses [Lerna](https://github.com/lerna/lerna) to manage dependencies across your micro app projects. You will need to install this first.
+      ``` 
+      npm install --global lerna@3.19.0
+      ```
+   
+   3. [rimraf](https://github.com/isaacs/rimraf) is the UNIX command rm -rf for node and is used by the clean script to remove the root node modules folder.
+      ```
+      npm install --global rimraf
+      ```
+      
+   4. Install Honeycomb CLI.
+      ```
+      npm install --global @schalltech/honeycomb-cli
+      ```
+      
+#### Create a Micro App
 
-> **Note:** At this time, the CLI is intended to be used with the provided repository template as it contains the build scripts and other required configurations for the micro apps to function properly.
+   1. Navigate to the `micro-apps` directory in the repo and generate your first micro app using the Honeycomb CLI.
+      ```
+      cd micro-apps
+      npx @schalltech/honeycomb-cli@latest create-micro-app
+      ```
+      
+   2. Run the bootstrap command. This will reference the generated micro app at the root of the repo and install all dependencies.
+      ```
+      npm run boostrap
+      ```
+      
+   3. Launch Storybook to see your new micro app.
+      ```
+      npm run start
+      ```
 
 ## Honeycomb Studio
 
