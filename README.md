@@ -37,7 +37,7 @@ The following is a basic example to illustrate how a Honeycomb Micro App could b
 
 #### Installation
 
-1. Download and install the honeycomb-react-microapp package.
+1. Download and install the [honeycomb-react-microapp](https://www.npmjs.com/package/@schalltech/honeycomb-react-microapp) package.
 
    ```bash
    npm i @schalltech/honeycomb-react-microapp
