@@ -47,22 +47,9 @@ The following is a basic example to illustrate how a Honeycomb Micro App could b
    ```
 
 2. Once installed, import the package module
+
    ```jsx
    import MicroApp from '@schalltech/honeycomb-react-microapp';
-   ```
-3. Incorporate the a micro-app into your application. In this example we are using a simple image micro app for illustration purposes.
-
-   ```js
-   <MicroApp
-        config={{
-          View: {
-            Scope: 'schalltech',
-            Name: 'image',
-            Version: 'latest',
-          },
-          DefaultSource: '<url to your image>'
-      }}
-   />
    ```
 
 #### Integration
@@ -120,9 +107,9 @@ Honeycomb makes it easier than ever to build your own micro apps to use within y
       npm install --global @schalltech/honeycomb-cli
       ```
       
-#### Create a Micro App
+#### Create a micro app
 
-   1. Navigate to the `micro-apps` directory in the repo and generate your first micro app using the Honeycomb CLI.
+   1. Navigate to the `micro-apps` directory in the repo and generate your first micro app using the Honeycomb CLI. To follow along in the next section 'Render your micro app in a React Application', name your micro app 'hello-world' when prompted by the CLI.
       ```
       cd micro-apps
       npx @schalltech/honeycomb-cli@latest create-micro-app
@@ -138,6 +125,47 @@ Honeycomb makes it easier than ever to build your own micro apps to use within y
       npm run start
       ```
 
+#### Render your micro app in a React application
+Congratulations, you just created your first Honeycomb Micro App! Next we will cover how to render your micro app in a React application as if it were a standard component. In this section, you will need to have a React application handy to add your micro app to. Creating a React application will not be covered here. If you do not have an app available, you could use the popular [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) CLI tool to create one quickly.
+
+   1. Open the React application in your favorite code editor and install the [honeycomb-react-microapp](https://www.npmjs.com/package/@schalltech/honeycomb-react-microapp) package.
+   
+      ```bash
+      npm i @schalltech/honeycomb-react-microapp
+      ```
+
+2. Once installed, import the package module
+   
+   ```jsx
+   import MicroApp from '@schalltech/honeycomb-react-microapp';
+   ```
+   
+3. Incorporate the a micro-app into your application.
+   ```js
+   import React from 'react';
+   import ReactDOM from 'react-dom';
+   import MicroApp from '@schalltech/honeycomb-react-microapp';
+
+   // Expose React and ReactDOM globally for the micro apps.
+   window.React = React;
+   window.ReactDOM = ReactDOM;
+
+   const App = () => {
+
+     return (
+       <MicroApp
+           config={{
+             View: {
+               Name: 'hello-world',
+               Path: 'http://localhost:3001/marketplace/hello-world/hello-world.js',
+             }
+           }}
+         />
+     );
+   });
+
+   export default App;
+   ```
 ## Honeycomb Studio
 
 ...
