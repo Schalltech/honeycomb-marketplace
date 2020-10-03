@@ -159,7 +159,7 @@ Congratulations, you just created your first Honeycomb Micro App! Next we will c
       import ReactDOM from 'react-dom';
       import MicroApp from '@schalltech/honeycomb-react-microapp';
 
-      // Expose React and ReactDOM globally for the micro apps.
+      // React and ReactDOM are not bundled with the micro app. They must be exposed globally for the micro apps.
       window.React = React;
       window.ReactDOM = ReactDOM;
 
@@ -171,7 +171,8 @@ Congratulations, you just created your first Honeycomb Micro App! Next we will c
                 View: {
                   // This should be the name of your micro app. If you named it something different, make sure this matches.
                   Name: 'hello-world',
-                  // This is the path to your local marketplace public folder. By default, port 3001 is used. Make sure the port and micro app name is correctly referenced in the url.
+                  // When running locally, we do not specify the scope and version of the micro app. The path to the micro app is provided instead.
+                  // By default, the local marketplace uses port 3001. Make sure the port and micro app name is correctly referenced in the url.
                   Path: 'http://localhost:3001/marketplace/hello-world/hello-world.js',
                 }
               }}
