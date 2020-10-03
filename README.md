@@ -30,7 +30,7 @@
 
 ## Getting Started
 
-There are multiple approaches that can be taken when using Honeycomb Micro Apps. One way is to mix them with traditionally code components within a React applications page. Another approach is to create a single micro app that represents an entire page within the application. Using [Honeycomb Studio](https://microapp.studio), it is even possible to build a full featured web application orchastrated entirely out of micro apps with dynamic routing.
+There are multiple approaches that can be taken when using Honeycomb Micro Apps. One way is to use them as traditionally coded components within a React applications page. Another approach is to create a single micro app that represents an entire page within the application. Using [Honeycomb Studio](https://microapp.studio), it is even possible to build a full featured web application composed entirely out of micro apps with dynamic routing.
 
 ### React Applications
 The following is a basic example to illustrate how a Honeycomb Micro App could be integrated with a React application.
@@ -50,7 +50,7 @@ The following is a basic example to illustrate how a Honeycomb Micro App could b
    ```jsx
    import MicroApp from '@schalltech/honeycomb-react-microapp';
    ```
-3. Incorporate the a micro-app into your application. In this example we are using a simple image for illustration purposes.
+3. Incorporate the a micro-app into your application. In this example we are using a simple image micro app for illustration purposes.
 
    ```js
    <MicroApp
