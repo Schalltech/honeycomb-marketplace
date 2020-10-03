@@ -103,7 +103,7 @@ export default App;
 
 ## Honeycomb Marketplace
 
-The [Honeycomb Marketplace](https://microapp.market) is a micro app store where developers and content creators can browse for micro apps to enhance their applications that have been released with the platform or created by the community. 
+The [Honeycomb Marketplace](https://microapp.market/search) is a micro app store where developers and content creators can browse for micro apps to enhance their applications that have been released with the platform or created by the community. 
 
 <!-- latest rtw -->
 #### Honeycomb Applications
