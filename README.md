@@ -66,9 +66,9 @@ The following is a basic example to illustrate how a Honeycomb Micro App could b
    ```
 
 #### Integration
-The following is an example of how the Image micro-app could be integrated into an existing application. **Note:** The version number referenced below is for illustration purposes only. You will need to provide the version of the Image you want to use. A link to the Image changelog is provided above to review release notes for specific versions.
+The following is an example of how the Image micro-app could be integrated into an existing application. **Note:** The version number referenced below is for illustration purposes only. You will need to specify the version of the micro app that will be used.
 
-To prevent multiple versions from being loaded, Honeycomb micro-apps require the host to provide references to React and ReactDOM externally. This can be included in your host applications app.js. Then you can import and render the `<MicroApp />` component any where within your application that you would like to incorporate micro-apps.
+To prevent multiple versions from being loaded, Honeycomb micro-apps require the host to provide references to React and ReactDOM globally. This can be included in your host applications app.js. Then you can import and render the `<MicroApp />` component any where within your application that you would like to incorporate micro-apps.
 
 ```js
 import React from 'react';
