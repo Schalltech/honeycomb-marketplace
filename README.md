@@ -105,7 +105,7 @@ Honeycomb makes it easier than ever to build your own micro apps to use within y
 Honeycomb provides a mono-repository [template](https://github.com/Schalltech/honeycomb-microapp-repo) developers can clone that comes pre-configured with [Lerna](https://github.com/lerna/lerna) for managing micro app dependencies, [Storybook](https://storybook.js.org) for isolated development and a local version of the marketplace for serving micro app requests while running locally. 
 
 #### Honeycomb CLI
-Complementing the micro app repository, Honeycomb also provides a command line interface (CLI) that will generate the [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) scaffolding of your micro app with the simple command `create-micro-app`. This will generate a fully functioning `Hello World` micro app that you can then customize with your required functionality.
+Complementing the micro app repository, Honeycomb also provides a [command line interface (CLI)](https://www.npmjs.com/package/@schalltech/honeycomb-cli) that will generate the [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) scaffolding of your micro app with the simple command `create-micro-app`. This will generate a fully functioning `Hello World` micro app that you can then customize with your required functionality.
 
 > **Note:** At this time, the CLI is intended to be used with the provided repository template as it contains the build scripts and other required configurations for the micro apps to function properly.
 
