@@ -1,6 +1,6 @@
 
 
-## Honeycomb Micro Apps
+# Honeycomb Micro Apps
 *ATTN: Honeycomb Studio, Honeycomb Marketplace, microapps, components and libraries are in pre-release and are not intended to be used in a production environment. The platform is currently under development and releases are not guaranteed to be backwards compatible.*
 
 <img src="https://microapp.services/cdn/media/5f53f90acf690435dcae31d8"/>
@@ -19,27 +19,24 @@
 
 ## Contents
 
-* [Quick Start](https://github.com/Schalltech/honeycomb#quick-start)
-* [Marketplace](https://github.com/Schalltech/honeycomb#marketplace)
-* [Tutorials](https://github.com/Schalltech/honeycomb/blob/master/__documentation__/tutorials/create-micro-app.md#honeycomb-for-beginners-getting-started-with-micro-apps)
-* [Additional Links](https://github.com/Schalltech/honeycomb#links)
-* [Additional Resources](https://github.com/Schalltech/honeycomb#additional-resources)
+* [About](https://github.com/Schalltech/honeycomb-marketplace#about)
+* [Getting Started](https://github.com/Schalltech/honeycomb-marketplace#getting-started)
+* [Honeycomb Studio](https://github.com/Schalltech/honeycomb-marketplace#honeycomb-studio)
+* [Honeycomb Marketplace](https://github.com/Schalltech/honeycomb-marketplace#honeycomb-marketplace)
 
+## About
 
+## Getting Started
 
-
+## Honeycomb Studio
 
 ## Honeycomb Marketplace
 
-The Marketplace acts as a production CDN of sorts that serves bundle requests to clients. All released bundles are hosted by the Marketplace and are updated everytime changes are merged into the master branch.
-
-
-[Guides and Demos](https://schalltech.github.io/honeycomb-marketplace/?path=/story/micro-apps-shared-button--overview)
+The Honeycomb Marketplace is a micro app store where developers and content creators can browse for micro apps to enhance their applications that have been released with the platform or created by the community. 
 
 <!-- latest rtw -->
 #### Honeycomb Applications
-Integrate and extend the functionality of your Honeycomb applications with these included micro-apps.
-
+Integrate and extend the functionality of your Honeycomb applications with these pre-built micro apps.
 Latest Version (RTW) | readme | demo  | changelog  | bundle | source map 
 :---- | :-----: | :-----: | :-----: | :-----: | :----:
 ![button](https://img.shields.io/badge/dynamic/json?color=green&logo=react&style=flat-square&label=button&prefix=Version%20&query=%24.version&url=https://raw.githubusercontent.com/Schalltech/honeycomb-marketplace/master/micro-apps/button/package.json) | [view](https://github.com/Schalltech/honeycomb-marketplace/blob/master/micro-apps/button/README.md) | --- | [view](https://github.com/Schalltech/honeycomb-marketplace/blob/master/micro-apps/button/CHANGELOG.md) | [download](https://microapp.services/cdn/bundle/schalltech/button@0.0.0-beta.8) | [download](---)
