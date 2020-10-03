@@ -50,7 +50,7 @@ The following is a basic example to illustrate how a Honeycomb Micro App could b
    ```jsx
    import MicroApp from '@schalltech/honeycomb-react-microapp';
    ```
-3. Incorporate the Image micro-app into your application.
+3. Incorporate the a micro-app into your application. In this example we are using a simple image for illustration purposes.
 
    ```js
    <MicroApp
