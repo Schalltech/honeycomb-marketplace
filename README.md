@@ -26,9 +26,80 @@
 
 ## About
 
+...
+
 ## Getting Started
 
+There are multiple approaches that can be taken when using Honeycomb Micro Apps. One way is to mix them with traditionally code components within a React applications page. Another approach is to create a single micro app that represents an entire page within the application. Using Honeycomb Studio, it is even possible to build a full featured web application orchastrated entirely out of micro apps with dynamic routing.
+
+### React Applications
+The following is a basic example to illustrate how a Honeycomb Micro App could be integrated with a React application.
+
+#### Installation
+
+1. Download and install the honeycomb-react-microapp package.
+
+   ```bash
+   npm i @schalltech/honeycomb-react-microapp
+   ```
+   ```bash
+   yarn add @schalltech/honeycomb-react-microapp
+   ```
+
+2. Once installed, import the package module
+   ```jsx
+   import MicroApp from '@schalltech/honeycomb-react-microapp';
+   ```
+3. Incorporate the Image micro-app into your application.
+
+   ```js
+   <MicroApp
+        config={{
+          View: {
+            Scope: 'schalltech',
+            Name: 'image',
+            Version: 'latest',
+          },
+          DefaultSource: '<url to your image>'
+      }}
+   />
+   ```
+
+#### Integration
+The following is an example of how the Image micro-app could be integrated into an existing application. **Note:** The version number referenced below is for illustration purposes only. You will need to provide the version of the Image you want to use. A link to the Image changelog is provided above to review release notes for specific versions.
+
+To prevent multiple versions from being loaded, Honeycomb micro-apps require the host to provide references to React and ReactDOM externally. This can be included in your host applications app.js. Then you can import and render the `<MicroApp />` component any where within your application that you would like to incorporate micro-apps.
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MicroApp from '@schalltech/honeycomb-react-microapp';
+
+window.React = React;
+window.ReactDOM = ReactDOM;
+
+const App = () => {
+
+  return (
+    <MicroApp
+        config={{
+          View: {
+            Scope: 'schalltech',
+            Name: 'image',
+            Version: '0.0.1',
+          },
+          DefaultSource: 'https://microapp.services/cdn/media/5f73cb2a8a49a4204cd980b0'
+        }}
+      />
+  );
+});
+
+export default App;
+```
+
 ## Honeycomb Studio
+
+...
 
 ## Honeycomb Marketplace
 
