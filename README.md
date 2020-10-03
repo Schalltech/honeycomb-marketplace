@@ -97,6 +97,12 @@ const App = () => {
 export default App;
 ```
 
+### Creating Micro Apps
+
+Honeycomb makes it easier than ever to build your own micro apps to use within your applications or publish to the Honeycomb Marketplace to share with the community. To make it easy to get up and running, Honeycomb provides a [templated repository](https://github.com/Schalltech/honeycomb-microapp-repo) to manage your micro apps and [Honeycomb CLI](https://www.npmjs.com/package/@schalltech/honeycomb-cli) that will generate the scaffolding of your micro app with a single `create-micro-app` command.
+
+
+
 ## Honeycomb Studio
 
 ...
