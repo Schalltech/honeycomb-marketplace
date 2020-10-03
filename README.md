@@ -55,7 +55,7 @@ The following is a basic example to illustrate how a Honeycomb Micro App could b
 #### Integration
 The following is an example of how the Image micro-app could be integrated into an existing application. **Note:** The version number referenced below is for illustration purposes only. You will need to specify the version of the micro app that will be used.
 
-To prevent multiple versions from being loaded, Honeycomb micro-apps require the host to provide references to React and ReactDOM globally. This can be included in your host applications app.js. Then you can import and render the `<MicroApp />` component any where within your application that you would like to incorporate micro-apps.
+To prevent multiple versions from being loaded, Honeycomb micro-apps require the host to provide references to React and ReactDOM globally. This can be included in your host applications app.js. Then you can import and render the `<MicroApp />` component any where within your application that you would like to incorporate micro apps.
 
 ```js
 import React from 'react';
@@ -134,38 +134,53 @@ Congratulations, you just created your first Honeycomb Micro App! Next we will c
       npm i @schalltech/honeycomb-react-microapp
       ```
 
-2. Once installed, import the package module
+   2. Once installed, import the package module.
    
-   ```jsx
-   import MicroApp from '@schalltech/honeycomb-react-microapp';
-   ```
+      ```jsx
+      import MicroApp from '@schalltech/honeycomb-react-microapp';
+      ```
    
-3. Incorporate the a micro-app into your application.
-   ```js
-   import React from 'react';
-   import ReactDOM from 'react-dom';
-   import MicroApp from '@schalltech/honeycomb-react-microapp';
+   3. Build your micro app.   
 
-   // Expose React and ReactDOM globally for the micro apps.
-   window.React = React;
-   window.ReactDOM = ReactDOM;
+      ```bash
+      npm run build:micro-apps
+      ```
+      
+   4. Launch the local marketplace to serve requests for your micro app.
+   
+      ```bash
+      npm run host:marketplace
+      ```
+      
+   5. Incorporate the a micro app into your application.
+   
+      ```js
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import MicroApp from '@schalltech/honeycomb-react-microapp';
 
-   const App = () => {
+      // Expose React and ReactDOM globally for the micro apps.
+      window.React = React;
+      window.ReactDOM = ReactDOM;
 
-     return (
-       <MicroApp
-           config={{
-             View: {
-               Name: 'hello-world',
-               Path: 'http://localhost:3001/marketplace/hello-world/hello-world.js',
-             }
-           }}
-         />
-     );
-   });
+      const App = () => {
 
-   export default App;
-   ```
+        return (
+          <MicroApp
+              config={{
+                View: {
+                  // This should be the name of your micro app. If you named it something different, make sure this matches.
+                  Name: 'hello-world',
+                  // This is the path to your local marketplace public folder. By default, port 3001 is used. Make sure the port and micro app name is correctly referenced in the url.
+                  Path: 'http://localhost:3001/marketplace/hello-world/hello-world.js',
+                }
+              }}
+            />
+        );
+      });
+
+      export default App;
+      ```
 ## Honeycomb Studio
 
 ...
