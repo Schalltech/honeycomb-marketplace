@@ -46,12 +46,6 @@ npm i @schalltech/honeycomb-react-microapp
 yarn add @schalltech/honeycomb-react-microapp
 ```
 
-2. Once installed, import the package module.
-
-   ```jsx
-   import MicroApp from '@schalltech/honeycomb-react-microapp';
-   ```
-
 #### Integration
 In this example, we are going to be using the [Redbox Demo](https://microapp.market/demo/5f7a2d637f4aa424c02636e2) Micro App. We will use the `<MicroApp />` HOC that we installed in the previous step to lazy load the Redbox Demo micro app into the application.
 
