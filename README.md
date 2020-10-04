@@ -53,7 +53,47 @@ yarn add @schalltech/honeycomb-react-microapp
    ```
 
 #### Integration
-In this example, we are using the [Redbox Demo Micro App](https://microapp.market/demo/5f7a2d637f4aa424c02636e2).
+In this example, we are going to be using the [Redbox Demo](https://microapp.market/demo/5f7a2d637f4aa424c02636e2) Micro App. We will use the `<MicroApp />` HOC that we installed in the previous step to lazy load the Redbox Demo micro app into the application.
+
+1. The first step is to import the `<MicroApp />` HOC.
+
+   ```jsx
+   import MicroApp from '@schalltech/honeycomb-react-microapp';
+   ```
+
+2. Next we need to load a couple peer dependencies that the micro apps require to function. In this case, its React and ReactDOM. It is important to understand that when we are loading a micro app, we are essentially lazy loading a small application into the browser. We need to be mindful that we do not duplicate modules that will bloat memory and impact performance. To help with this, all React based Honeycomb Micro Apps treat React and ReactDOM as peer dependencies and exclude them from their own bundles. They instead expect the host to expose the dependencies globally before attempting to render a micro app. This is typically done in the app.js file of the host.
+
+   ```js
+   import React from 'react';
+   import ReactDOM from 'react-dom';
+   
+   ...
+   
+   window.React = React;
+   window.ReactDOM = ReactDOM;
+   ```
+
+3. Finally we need to add the `<MicroApp />` to our render method.
+
+   ```js
+    return (
+      <MicroApp
+          config={{
+            View: {
+              // The name of the micro app.
+              Name: 'redbox-demo',
+              // The scope or owner of the micro app.
+              Scope: 'deadpool',
+              // The version of the micro app you want to use.
+              // Accepts a specific semantic version (ex. 1.0.0) of the micro app or the filter 'latest' can be specified to ensure the latest available version is always used.
+              Version: 'latest'
+            }
+          }}
+        />
+    );
+   ```
+   
+A complete example can be seen below. For this example, we chose to render the micro app directly in the applications app.js file for simplicity. It is important to keep in mind that the peer dependencies must be added before attempting to render a micro app. It is recommended to do this in the app.js file however, rendering the micro app itself can be done anywhere in the application like a other component.
 
 ```js
 import React from 'react';
