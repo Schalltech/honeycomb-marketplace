@@ -53,7 +53,7 @@ The following is a basic example to illustrate how an existing Honeycomb Micro A
    ```
 
 #### Integration
-The following is an example of how the Image micro-app could be integrated into an existing application. **Note:** The version number referenced below is for illustration purposes only. You will need to specify the version of the micro app that will be used.
+The following is an example of how the [Image micro-app](https://microapp.market/images/5efc0ce2fadf4c9fa418f51a) could be used in any React application. **Note:** The version number referenced below is for illustration purposes only. You will need to specify the version of the micro app that will be used.
 
 To prevent multiple versions from being loaded, Honeycomb micro-apps require the host to provide references to React and ReactDOM globally. This can be included in your host applications app.js. Then you can import and render the `<MicroApp />` component any where within your application that you would like to incorporate micro apps.
 
@@ -62,6 +62,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MicroApp from '@schalltech/honeycomb-react-microapp';
 
+// React and ReactDOM are not bundled with the micro app.
+// They must be exposed globally for micro apps as peer dependencies.
 window.React = React;
 window.ReactDOM = ReactDOM;
 
@@ -71,9 +73,13 @@ const App = () => {
     <MicroApp
         config={{
           View: {
-            Scope: 'schalltech',
+            // The name of the micro app.
             Name: 'image',
-            Version: '0.0.1',
+            // The scope or owner of the micro app.
+            Scope: 'schalltech',
+            // The version of the micro app you want to use.
+            // Accepts a specific semantic version (ex. 1.0.0) of the micro app or the filter 'latest' can be specified to ensure the latest available version is always used.
+            Version: 'latest'
           },
           DefaultSource: 'https://microapp.services/cdn/media/5f73cb2a8a49a4204cd980b0'
         }}
@@ -160,7 +166,7 @@ Congratulations, you just created your first Honeycomb Micro App! Next we will c
       import MicroApp from '@schalltech/honeycomb-react-microapp';
 
       // React and ReactDOM are not bundled with the micro app.
-      // They must be exposed globally for the micro apps as peer dependencies.
+      // They must be exposed globally for micro apps as peer dependencies.
       window.React = React;
       window.ReactDOM = ReactDOM;
 
