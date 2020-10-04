@@ -33,27 +33,27 @@
 There are multiple approaches that can be taken when using Honeycomb Micro Apps. One way is to use them as if they were traditionally coded components within a React application. Another approach is to create a single micro app that represents an entire page within the application. Using [Honeycomb Studio](https://microapp.studio), it is even possible to build a full featured web application composed entirely out of micro apps with dynamic routing.
 
 ### Using Micro Apps
-The following is a basic example to illustrate how an existing Honeycomb Micro App could be integrated with a simple React application.
+The following is a basic example to illustrate how an existing Honeycomb Micro App could be used in any React application. 
 
 #### Installation
 
-1. Download and install the [honeycomb-react-microapp](https://www.npmjs.com/package/@schalltech/honeycomb-react-microapp) package.
+Download and install the [honeycomb-react-microapp](https://www.npmjs.com/package/@schalltech/honeycomb-react-microapp) package.
 
-   ```bash
-   npm i @schalltech/honeycomb-react-microapp
-   ```
-   ```bash
-   yarn add @schalltech/honeycomb-react-microapp
-   ```
+```bash
+npm i @schalltech/honeycomb-react-microapp
+```
+```bash
+yarn add @schalltech/honeycomb-react-microapp
+```
 
-2. Once installed, import the package module
+2. Once installed, import the package module.
 
    ```jsx
    import MicroApp from '@schalltech/honeycomb-react-microapp';
    ```
 
 #### Integration
-The following is an example of how the [Image micro-app](https://microapp.market/images/5efc0ce2fadf4c9fa418f51a) could be used in any React application.
+In this example, we are using the [Redbox Demo Micro App](https://microapp.market/demo/5f7a2d637f4aa424c02636e2).
 
 ```js
 import React from 'react';
@@ -72,14 +72,13 @@ const App = () => {
         config={{
           View: {
             // The name of the micro app.
-            Name: 'image',
+            Name: 'redbox-demo',
             // The scope or owner of the micro app.
-            Scope: 'schalltech',
+            Scope: 'deadpool',
             // The version of the micro app you want to use.
             // Accepts a specific semantic version (ex. 1.0.0) of the micro app or the filter 'latest' can be specified to ensure the latest available version is always used.
             Version: 'latest'
-          },
-          DefaultSource: 'https://microapp.services/cdn/media/5f73cb2a8a49a4204cd980b0'
+          }
         }}
       />
   );
