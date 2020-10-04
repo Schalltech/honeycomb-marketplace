@@ -60,11 +60,12 @@ In this example, we are going to use the [Redbox Demo](https://microapp.market/d
    ```js
    import React from 'react';
    import ReactDOM from 'react-dom';
-   
-   ...
+   import App from './App';
    
    window.React = React;
    window.ReactDOM = ReactDOM;
+   
+   ReactDOM.render(<App />, document.getElementById('root'));
    ```
 
 3. Finally we need to add the `<MicroApp />` to our render method.
