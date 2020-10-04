@@ -68,6 +68,11 @@ module.exports = {
           // All native honeycomb micro apps will have 'schalltech' as the scoope.
           let scope = 'schalltech';
 
+          // Demos micro apps belong to the beekeeper scope.
+          if (appName === 'redbox-demo') {
+            scope = 'beekeeper';
+          }
+
           console.log('UPLOADING Bundle:', `${scope}/${appName}/${appVersion}`);
           
           // const deployServer = 'http://localhost:4001';
@@ -205,7 +210,7 @@ function buildVersionTable(data, startIndex, stopIndex) {
   if (tableRows !== '') {
 
     table += '\n\n#### Honeycomb Applications\n';
-    table += 'Integrate and extend the functionality of your Honeycomb applications with these included micro-apps.\n\n';
+    table += 'Integrate and extend the functionality of your applications with these pre-built micro-apps.\n\n';
 
     table += 'Latest Version (RTW) | readme | demo  | changelog  | bundle | source map \n';
     table += ':---- | :-----: | :-----: | :-----: | :-----: | :----:';
