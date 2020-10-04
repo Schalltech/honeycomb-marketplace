@@ -87,7 +87,11 @@ In this example, we are going to use the [Redbox Demo](https://microapp.market/d
         />
     );
    ```
-   
+
+Wait a minute! What is all this config stuff? 
+
+The `<MicroApp />` HOC requires a config prop that identifies the name, scope (a.k.a. owner) and the version of the micro app it is going to load. With this information, the component is able to retrieve the micro app's bundle from the CDN and lazy load it into the host application. Honeycomb Micro Apps follow [semantic versioning](https://semver.org/) standards (ex. 0.0.0-beta.1, 1.0.0 etc.) when specifying a specific version to load. The `latest` flag is also supported if you want to ensure the latest version of the micro app is always used. The available versions of a micro app can be found on its plugin information page accessible from the [Honeycomb Marketplace](https://microapp.market).
+
 A complete example can be seen below. We chose to render the micro app directly in the applications app.js file for simplicity. It is important to keep in mind that the peer dependencies must be added before attempting to render a micro app. It is recommended to do this in the host applications index.js file however, rendering the micro app itself can be done anywhere in the application like any other component.
 
 ```js
