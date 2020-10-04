@@ -75,12 +75,8 @@ In this example, we are going to use the [Redbox Demo](https://microapp.market/d
       <MicroApp
           config={{
             View: {
-              // The name of the micro app.
               Name: 'redbox-demo',
-              // The scope or owner of the micro app.
-              Scope: 'deadpool',
-              // The version of the micro app you want to use.
-              // Accepts a specific semantic version (ex. 1.0.0) of the micro app or the filter 'latest' can be specified to ensure the latest available version is always used.
+              Scope: 'beekeeper',
               Version: 'latest'
             }
           }}
@@ -109,7 +105,7 @@ const App = () => {
         config={{
           View: {
             Name: 'redbox-demo',
-            Scope: 'deadpool',
+            Scope: 'beekeeper',
             Version: 'latest'
           }
         }}
