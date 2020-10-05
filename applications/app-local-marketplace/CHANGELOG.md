@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Schalltech/honeycomb-marketplace/compare/app-local-marketplace@0.2.0...app-local-marketplace@0.3.0) (2020-10-05)
+
+
+### Features
+
+* add redbox demo micro app ([91b47c3](https://github.com/Schalltech/honeycomb-marketplace/commit/91b47c30f456f6b36ed1aeacaf165bc27bef9f91))
+
+
+
+
+
 # 0.2.0 (2020-10-01)
 
 
