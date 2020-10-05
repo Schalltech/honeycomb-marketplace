@@ -35,6 +35,8 @@ There are multiple approaches that can be taken when using Honeycomb Micro Apps.
 ### Using Micro Apps
 The following is a basic example to illustrate how an existing Honeycomb Micro App could be used in any React application. 
 
+> In this section, you will need to have a React application handy to follow along. Creating a React application will not be covered here. If you do not have an application available, you could use the popular [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) CLI tool to create one quickly.
+
 #### Installation
 
 Download and install the [honeycomb-react-microapp](https://www.npmjs.com/package/@schalltech/honeycomb-react-microapp) package.
