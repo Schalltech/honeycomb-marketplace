@@ -119,7 +119,6 @@ import ReactDOM from 'react-dom';
 import MicroApp from '@schalltech/honeycomb-react-microapp';
 
 const App = () => {
-
   return (
     <MicroApp
         config={{
