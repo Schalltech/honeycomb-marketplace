@@ -66,7 +66,7 @@ In this example, we are going to use the [Redbox Demo](https://microapp.market/d
 
 2. Next we need to load a couple peer dependencies that the micro apps require to function. In this case, it is React and ReactDOM. It is important to understand that when we are loading a micro app, we are essentially lazy loading a small application into the browser. We need to be mindful that we do not duplicate modules that will bloat memory and impact performance. To help with this, all React based Honeycomb Micro Apps treat React and ReactDOM as peer dependencies and exclude them from their own bundles. They instead expect the host to expose the dependencies globally before attempting to render a micro app. This is typically done in the index.js file of the host application.
 
-   ```js
+   ```jsx
    // index.js
    import React from 'react';
    import ReactDOM from 'react-dom';
@@ -100,13 +100,23 @@ The `<MicroApp />` HOC requires a config prop that identifies the name, scope (a
 
 A complete example can be seen below. We chose to render the micro app directly in the applications app.js file for simplicity. It is important to keep in mind that the peer dependencies must be added before attempting to render a micro app. It is recommended to do this in the host applications index.js file however, rendering the micro app itself can be done anywhere in the application like any other component.
 
-```js
+```jsx
+// index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MicroApp from '@schalltech/honeycomb-react-microapp';
+import App from './App';
 
 window.React = React;
 window.ReactDOM = ReactDOM;
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+   
+```jsx
+// app.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MicroApp from '@schalltech/honeycomb-react-microapp';
 
 const App = () => {
 
