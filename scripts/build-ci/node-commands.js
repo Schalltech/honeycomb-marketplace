@@ -62,9 +62,6 @@ module.exports = {
           // Parse the micro apps version from the file name.
           appVersion = fileName.substr(0, fileName.lastIndexOf('.')).replace(`${appName}.`, '');
 
-          // Remove the ma- prefix and special chars from the micro apps name.
-          appName = appName.replace(/-/g, ' ');
-
           // All native honeycomb micro apps will have 'schalltech' as the scoope.
           let scope = 'schalltech';
 
@@ -72,6 +69,9 @@ module.exports = {
           if (appName === 'redbox-demo') {
             scope = 'beekeeper';
           }
+
+          // Remove the ma- prefix and special chars from the micro apps name.
+          appName = appName.replace(/-/g, ' ');
 
           console.log('UPLOADING Bundle:', `${scope}/${appName}/${appVersion}`);
           
