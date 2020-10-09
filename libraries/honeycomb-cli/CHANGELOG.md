@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/Schalltech/honeycomb-marketplace/compare/@schalltech/honeycomb-cli@0.14.0...@schalltech/honeycomb-cli@0.15.0) (2020-10-09)
+
+
+### Features
+
+* updated to latest honeycomb core package ([fecf502](https://github.com/Schalltech/honeycomb-marketplace/commit/fecf502266dd7a648fdd727da7c5e353fb127f4e))
+
+
+
+
+
 # [0.14.0](https://github.com/Schalltech/honeycomb-marketplace/compare/@schalltech/honeycomb-cli@0.13.0...@schalltech/honeycomb-cli@0.14.0) (2020-10-02)
 
 

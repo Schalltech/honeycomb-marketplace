@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.0.0-beta.5](https://github.com/Schalltech/honeycomb-marketplace/compare/ma-image@0.0.0-beta.4...ma-image@0.0.0-beta.5) (2020-10-09)
+
+
+### Features
+
+* updated to latest honeycomb core package ([fecf502](https://github.com/Schalltech/honeycomb-marketplace/commit/fecf502266dd7a648fdd727da7c5e353fb127f4e))
+
+
+
+
+
 
 # 0.0.0-beta.1 (2020-09-30)
 
