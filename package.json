@@ -9,7 +9,7 @@
     "start": "start-storybook -p 3000 -c .storybook",
     "bootstrap": "lerna link convert && npm install && npm run install:hooks",
     "install:hooks": "node scripts/install-hooks.js",
-    "create:micro-app": "npx @schalltech/honeycomb-cli@latest create-micro-app",
+    "create:micro-app": "cd micro-apps && npx @schalltech/honeycomb-cli@latest create-micro-app",
     "build:micro-apps": "lerna exec --concurrency 10 --no-bail --scope ma-* -- node ../../scripts/build-micro-apps.js",
     "build:storybook": "build-storybook -c .storybook -o ./docs",
     "host:marketplace": "lerna run --scope app-local-marketplace start",
