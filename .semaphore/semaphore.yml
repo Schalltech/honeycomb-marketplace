@@ -38,7 +38,8 @@ blocks:
             - sudo mkswap /swapfile
             - sudo swapon /swapfile
             - checkout
-            - node scripts/build-ci/merge-script.js $SEMAPHORE_BUILD_AGENT
+            - node scripts/build-ci/merge-script.js $SEMAPHORE_BUILD_AGENT $PUBLISH_KEY
       secrets:
         - name: Github
         - name: NPM
+        - name: Honeycomb

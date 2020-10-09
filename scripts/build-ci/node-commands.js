@@ -29,7 +29,7 @@ module.exports = {
       console.log('Directory was empty. \n');
     }
   },
-  async restUpload(logMsg) {
+  async restUpload(publishKey, logMsg) {
 
     console.log('--------------------------------------------------------------------------');
     console.log(logMsg);
@@ -65,7 +65,7 @@ module.exports = {
           // All native honeycomb micro apps will have 'schalltech' as the scoope.
           let scope = 'schalltech';
 
-          // Demos micro apps belong to the beekeeper scope.
+          // Demo micro apps belong to the beekeeper scope.
           if (appName === 'redbox-demo') {
             scope = 'beekeeper';
           }
@@ -73,20 +73,24 @@ module.exports = {
           // Remove the ma- prefix and special chars from the micro apps name.
           appName = appName.replace(/-/g, ' ');
 
-          console.log('UPLOADING Bundle:', `${scope}/${appName}/${appVersion}`);
-          
           // const deployServer = 'http://localhost:4001';
           const deployServer = 'https://microapp.services';
-          await formData.submit(`${deployServer}/api/marketplace/plugins/version/publish/${scope}/${appName}/${appVersion}`, function(err, res) {
+          const url = `${deployServer}/api/marketplace/plugins/version/publish/${scope}/${appName}/${appVersion}/${publishKey}`;
+          console.log('UPLOADING Bundle:', `${scope}/${appName}/${appVersion}`);
+
+          await formData.submit(url, function(err, res) {
+            // res – response object (http.IncomingMessage)
 
             if (res) {
-              console.log(`Status: ${res.statusCode}: ${res.statusMessage} - ${res.req.path}`);
+              console.log(`Status: ${res.statusCode}: ${res.statusMessage} - ${res.req.path.replace(publishKey, '')}`);
             }
 
             if (err) {
               console.log(`ERROR: ${err}`);
               throw err;
             }
+
+            // res.resume();
           });
         }
           catch(err) {

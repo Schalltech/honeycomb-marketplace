@@ -9,7 +9,7 @@
     "start": "start-storybook -p 3000 -c .storybook",
     "bootstrap": "lerna link convert && npm install && npm run install:hooks",
     "install:hooks": "node scripts/install-hooks.js",
-    "create:micro-app": "npx @schalltech/honeycomb-cli@latest create-micro-app",
+    "create:micro-app": "cd micro-apps && npx @schalltech/honeycomb-cli@latest create-micro-app",
     "build:micro-apps": "lerna exec --concurrency 10 --no-bail --scope ma-* -- node ../../scripts/build-micro-apps.js",
     "build:storybook": "build-storybook -c .storybook -o ./docs",
     "host:marketplace": "lerna run --scope app-local-marketplace start",
@@ -39,7 +39,10 @@
     "@schalltech/honeycomb-cli": "file:libraries\\honeycomb-cli",
     "app-local-marketplace": "file:applications\\app-local-marketplace",
     "ma-button": "file:micro-apps\\button",
-    "ma-image": "file:micro-apps\\image"
+    "ma-cloudinary": "file:micro-apps\\cloudinary",
+    "ma-image": "file:micro-apps\\image",
+    "ma-redbox-demo": "file:micro-apps\\redbox-demo",
+    "ma-textbox": "file:micro-apps\\textbox"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -86,7 +89,6 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-named-asset-import": "^0.3.5",
-    "babel-plugin-styled-components": "^1.10.6",
     "babel-polyfill": "6.9.1",
     "babel-preset-react-app": "^9.1.0",
     "basic-ftp": "^4.5.3",

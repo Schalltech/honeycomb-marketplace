@@ -3,7 +3,7 @@ const lerna = require('./lerna-commands');
 const git = require('./git-commands');
 
 const GITHUB_TOKEN = process.argv[2];
-const FTP_PWD = process.argv[3];
+const PUBLISH_KEY = process.argv[3];
 
 (async () => {
 
@@ -67,7 +67,7 @@ const FTP_PWD = process.argv[3];
     await git.push('--tags', GITHUB_TOKEN, 'PUSHING VERSION TAGS');
 
     // Publish all micro-app bundles in the drop folder to the marketplace.
-    await node.restUpload('PUBLISHING BUNDLES');
+    await node.restUpload(PUBLISH_KEY, 'PUBLISHING BUNDLES');
 
     await lerna.publish(scopedPackages);
 
