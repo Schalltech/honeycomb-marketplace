@@ -9,7 +9,7 @@
     "publish": "echo publish command ignored for micro-apps"
   },
   "dependencies": {
-    "@schalltech/honeycomb-core": "^0.10.1",
+    "@schalltech/honeycomb-core": "^0.10.2",
     "axios": "^0.20.0",
     "cloudinary-react": "^1.6.6",
     "history": "^4.10.1",

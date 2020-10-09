@@ -9,7 +9,7 @@
     "publish": "echo publish command ignored for micro-apps"
   },
   "dependencies": {
-    "@schalltech/honeycomb-core": "^0.10.1",
+    "@schalltech/honeycomb-core": "^0.10.2",
     "mobx": "^5.15.4",
     "mobx-react": "^6.3.0",
     "mobx-react-lite": "^1.5.2",
