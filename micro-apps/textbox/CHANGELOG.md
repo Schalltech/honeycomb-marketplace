@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.0.0-beta.3](https://github.com/Schalltech/honeycomb-marketplace/compare/ma-textbox@0.0.0-beta.2...ma-textbox@0.0.0-beta.3) (2020-10-09)
+
+
+### Features
+
+* updated honeycomb core dependency ([e297488](https://github.com/Schalltech/honeycomb-marketplace/commit/e297488cdb704c549d4641dc15f15bbeb4cb478b))
+
+
+
+
+
 # [0.0.0-beta.2](https://github.com/Schalltech/honeycomb-marketplace/compare/ma-textbox@0.0.0-beta.1...ma-textbox@0.0.0-beta.2) (2020-10-02)
 
 
