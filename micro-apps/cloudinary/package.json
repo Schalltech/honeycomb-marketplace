@@ -1,6 +1,6 @@
 {
-  "name": "ma-textbox",
-  "version": "0.0.0-beta.2",
+  "name": "ma-cloudinary",
+  "version": "0.0.0-beta.0",
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@schalltech/honeycomb-core": "^0.10.1",
+    "axios": "^0.20.0",
+    "cloudinary-react": "^1.6.6",
     "history": "^4.10.1",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^1.5.2",
