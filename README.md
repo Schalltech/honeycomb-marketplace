@@ -168,7 +168,7 @@ Honeycomb makes it easier than ever to build your own micro apps to use within y
       
    2. Run the bootstrap command. This will reference the generated micro app at the root of the repo and install all dependencies.
       ```
-      npm run boostrap
+      npm run bootstrap
       ```
       
    3. Launch Storybook to see your new micro app.
@@ -177,7 +177,9 @@ Honeycomb makes it easier than ever to build your own micro apps to use within y
       ```
 
 #### Render your micro app in a React application
-Congratulations, you just created your first Honeycomb Micro App! Next we will cover how to render your micro app in a React application as if it were a standard component. In this section, you will need to have a React application handy to add your micro app to. Creating a React application will not be covered here. If you do not have an app available, you could use the popular [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) CLI tool to create one quickly.
+Congratulations, you just created your first Honeycomb Micro App! Next we will cover how to render your micro app in a React application as if it were a standard component. 
+
+> In this section, you will need to have a React application handy to follow along. Creating a React application will not be covered here. If you do not have an application available, you could use the popular [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) CLI tool to create one quickly.
 
    1. Open the React application in your favorite code editor and install the [honeycomb-react-microapp](https://www.npmjs.com/package/@schalltech/honeycomb-react-microapp) package.
    
