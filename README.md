@@ -205,7 +205,7 @@ Congratulations, you just created your first Honeycomb Micro App! Next we will c
       npm run host:marketplace
       ```
       
-   5. Incorporate the a micro app into your application. For the sake of simplicity, we are importing `<MicroApp />` in the app.js file. Exposing the React and ReactDOM modules globally must be done in the code before attempting to render a micro app.
+   5. Render the micro app into your application. For the sake of simplicity, we are importing `<MicroApp />` in the app.js file. Exposing React and ReactDOM modules globally must be done in the code before attempting to render a micro app.
    
       ```js
       import React from 'react';
