@@ -168,7 +168,7 @@ Honeycomb makes it easier than ever to build your own micro apps to use within y
       
    2. Run the bootstrap command. This will reference the generated micro app at the root of the repo and install all dependencies.
       ```
-      npm run boostrap
+      npm run bootstrap
       ```
       
    3. Launch Storybook to see your new micro app.
